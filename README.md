@@ -33,6 +33,7 @@ static class Abc {
 public static void syncEquivalent() {
     Abc abc = new Abc();
 
+
     int c0 = abc.a(1, 1);
     int c1 = abc.a(2, 2);
     int c2 = abc.a(c0, c1);
