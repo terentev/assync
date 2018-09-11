@@ -10,11 +10,19 @@ Functionality 1. usage as sync manner 1. get result in sync or async manner 1. w
 
 Compare the two examples
 
-Sync int a = abc.a(1, 1); int b = abc.a(2, 2); int c = abc.a(a, b); Async Assync<Integer> a = Assyncs.call(abc, wrapperForMethod, 1, 1); //non blocking Assync<Integer> b = Assyncs.call(abc, wrapperForMethod, 2, 2); //non blocking Assync<Integer> c = Assyncs.call(abc, wrapperForMethod, a, b); //non blocking
+Sync int a = abc.a(1, 1); 
+int b = abc.a(2, 2); 
+int c = abc.a(a, b); 
+Async Assync<Integer> a = Assyncs.call(abc, wrapperForMethod, 1, 1); 
+//non blocking 
+Assync<Integer> b = Assyncs.call(abc, wrapperForMethod, 2, 2); 
+//non blocking 
+Assync<Integer> c = Assyncs.call(abc, wrapperForMethod, a, b); 
+//non blocking
 
 Full example:
 
-``` public class Main2 {
+public class Main2 {
 
 static class Abc {
     public int a(int a, int b) {
